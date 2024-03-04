@@ -1,0 +1,103 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+
+body {
+font-family: 'Poppins', sans-serif
+}
+
+.slick-prev:before,
+.slick-next:before {
+  color: #252525!important
+}
+
+
+.webkit-width{
+  width: -webkit-fill-available;
+}
+
+.center-navM{
+  display: flex;
+  justify-content: space-between !important;
+  float: right;
+}
+
+.webkit-width{
+  width: -webkit-fill-available;
+}
+
+.image-menu{
+  width: 349px;
+  height: 355px;
+}
+
+
+.fade-in-out {
+  opacity: 0;
+  animation: fade-in 1s ease-in forwards, fade-out 2s 1s ease-out forwards;
+}
+
+@keyframes fade-in {
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fade-out {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+
+@media only screen and (min-width: 768px) {
+  .webkit-widthM{
+    width: -webkit-fill-available;
+    display: contents;
+    right: 0 !important;
+  }
+
+  .webkit-width{
+    width: -webkit-fill-available;
+  }
+}
+
+
+@media only screen and (max-width: 768px) { 
+  .navM{
+    display: flex;
+    flex-direction: row;
+    justify-content: right;
+    justify-self: end !important;
+    right: 0 !important;
+    justify-items: end;
+  }
+
+  .webkit-widthM{
+    width: -webkit-fill-available;
+  }
+
+  .eclips-position{
+    position: fixed;
+    top: -560px;
+    left: 0px;
+  }
+}
+
+
+@media only screen and (width: 1024px) { 
+  .menuNavM{
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  webkit-widthM{
+    width: -webkit-fill-available;
+  }
+}
