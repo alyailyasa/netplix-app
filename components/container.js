@@ -1,4 +1,4 @@
-import React from "react";
+import React from "react"
 
 export default function Container(props) {
   return (
@@ -8,5 +8,5 @@ export default function Container(props) {
     >
       {props.children}
     </div>
-  );
+  )
 }

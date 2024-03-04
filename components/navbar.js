@@ -23,6 +23,9 @@ export default function Navbar() {
     setSearchTerm(event.target.value)
     console.log(searchTerm)
   }
+  const clearInput = () => {
+    setSearchTerm('')
+  }
 
 
   return (
@@ -79,7 +82,7 @@ export default function Navbar() {
                 </div>
                 <div className="mt-8 ml-3 text-[16px] font-bold flex flex-col gap-3">
                   <div className="flex items-center rounded-md px-4 duration-300 cursor-pointer hover:bg-trueGray-200 ">
-                    <Link legacyBehavior href="/">
+                    <Link legacyBehavior href="/series">
                       <span>
                         Series 
                       </span>
@@ -93,14 +96,30 @@ export default function Navbar() {
                     </Link>
                   </div>
                   <div className="flex items-center rounded-md px-4 duration-300 cursor-pointer hover:bg-trueGray-200 ">
-                    <Link legacyBehavior href="/">
+                    <Link legacyBehavior href="/genre">
                       <span>
                         Genre
                       </span>
                     </Link>
                   </div>
                   <div className="flex items-center rounded-md px-4 duration-300 cursor-pointer hover:bg-trueGray-200 ">
-                    
+                    <form onSubmit={handleSearch}>
+                      <div className="flex gap-2 items-center w-full border border-gray-300 rounded p-2 mb-4">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="w-6 h-6">
+                          <path strokeLinecap="round" strokeLinejoin="round" d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z" />
+                        </svg>
+                        <input
+                          type="text"
+                          placeholder="Search movies"
+                          className="w-full p-1"
+                          value={searchTerm}
+                          onChange={handleChange}
+                        />
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="w-6 h-6 cursor-pointer" onClick={clearInput}>
+                          <path strokeLinecap="round" strokeLinejoin="round" d="M6 18 18 6M6 6l12 12" />
+                        </svg>
+                      </div>
+                    </form>
                   </div>
                 </div>
               </div>
@@ -119,6 +138,9 @@ export default function Navbar() {
                   value={searchTerm}
                   onChange={handleChange}
                 />
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="w-6 h-6 cursor-pointer" onClick={clearInput}>
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M6 18 18 6M6 6l12 12" />
+                </svg>
               </div>
             </form>
           </div>

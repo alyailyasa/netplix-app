@@ -6,6 +6,7 @@ import Slider from "react-slick"
 import 'slick-carousel/slick/slick.css'
 import 'slick-carousel/slick/slick-theme.css'
 import SliderBanner from '../components/SliderBanner'
+import Head from 'next/head'
 
 export default function index() {
   const [movies, setMovies] = useState([])
@@ -115,6 +116,9 @@ useEffect(() => {
 
   return (
     <>
+      <Head>
+        <title>Netplix - Movies</title>
+      </Head>
       <Navbar/>
       <Container>
         <div className="w-full">
